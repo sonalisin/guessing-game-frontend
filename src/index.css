@@ -1,13 +1,37 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Press+Start+2P&family=Rubik+Mono+One&family=Space+Mono:wght@700&display=swap");
+
+:root {
+  --backgroundColor: rgb(250, 213, 234);
+  --hoverFontColor: rgb(61, 127, 204);
+  --colorShadeA: rgb(111, 177, 205);
+  --colorShadeB: rgb(122, 171, 192);
+  --colorShadeC: rgb(165, 195, 208);
+  --colorShadeD: rgb(206, 237, 251);
+  --colorShadeE: rgb(225, 238, 244);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "OpenSans", sans-serif;
+  font-size: 1rem;
+  line-height: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  background: var(--backgroundColor);
+}
+
+h1 {
+  font-family: "Rubik Mono One";
+  color: var(--colorShadeC);
+  -webkit-text-stroke: 1px var(--hoverFontColor);
 }

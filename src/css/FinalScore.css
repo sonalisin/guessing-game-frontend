@@ -1,0 +1,38 @@
+.FinalScoreWrapper {
+  margin: auto;
+  background-color: rgb(239, 200, 200);
+  height: 50vh;
+  text-align: center;
+  width: 80vw;
+  border-radius: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FinalScore {
+  height: 80%;
+  width: 90%;
+  border-radius: 50px;
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: cornflowerblue;
+}
+.Score {
+  font-family: "Press Start 2P", cursive;
+  font-size: 3em;
+}
+
+.PlayAgain {
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.PlayAgain:hover {
+  border: 1px solid black;
+
+  color: rgb(172, 138, 204);
+}

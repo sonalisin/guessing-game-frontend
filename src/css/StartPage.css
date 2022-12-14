@@ -1,0 +1,76 @@
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--colorShadeA);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Rubik Mono One";
+}
+
+button.StartBtn {
+  padding: 1em 2em;
+  border: 2px solid var(--colorShadeA);
+  border-radius: 1em;
+  background: var(--colorShadeE);
+  transform-style: preserve-3d;
+  transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+
+button.StartBtn::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--colorShadeC);
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.5em 0 0 var(--colorShadeA);
+  transform: translate3d(0, 0.75em, -1em);
+  transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+
+button.StartBtn:hover {
+  background: var(--colorShadeD);
+  transform: translate(0, 0.375em);
+  color: var(--hoverFontColor);
+}
+
+button.StartBtn:hover::before {
+  transform: translate3d(0, 0.75em, -1em);
+}
+
+button.StartBtn:active {
+  transform: translate(0em, 0.75em);
+}
+
+button.StartBtn:active::before {
+  transform: translate3d(0, 0, -1em);
+  box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+}
+
+.Info {
+  font-family: inherit;
+  color: var(--hoverFontColor);
+}
+
+.Info h1 {
+  text-shadow: 0 0 2px var(--colorShadeB), 0 0.1em 0 var(--colorShadeA);
+}
+
+.Info p {
+  border: 2px solid var(--colorShadeB);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: var(--colorShadeE);
+  font-family: "Press Start 2P", cursive;
+  max-width: 70vw;
+}
