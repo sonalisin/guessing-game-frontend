@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import Question from "./Question";
-const API_BASE_URL = "http://127.0.0.1:5000/api";
+const API_BASE_URL = "http://localhost:8000/api";
 
 export default function Game({ endGame }) {
   const [options, setOptions] = useState([]);
@@ -51,7 +51,9 @@ export default function Game({ endGame }) {
           <h2 className="GameInstructions">
             What film or TV show does this character appear in?
           </h2>
-          <h2 className="QuestionNo">Question {questionNo}</h2>
+          <h2 data-testid="questionNo" className="QuestionNo">
+            Question {questionNo}
+          </h2>
           <Question
             img={correctAnswer.img}
             options={options}
@@ -59,7 +61,7 @@ export default function Game({ endGame }) {
           />
         </div>
       ) : (
-        <div class="lds-dual-ring"></div>
+        <div data-testid="loading" className="lds-dual-ring"></div>
       )}
     </div>
   );
